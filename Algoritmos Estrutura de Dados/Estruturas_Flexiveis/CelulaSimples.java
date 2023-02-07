@@ -1,10 +1,10 @@
 package Estruturas_Flexiveis;
 
-public class Celula {
+public class CelulaSimples {
     public int cell;
-    public Celula next;
+    public CelulaSimples next;
 
-    public Celula(int x) {
+    public CelulaSimples(int x) {
         cell = x;
         next = null;    
     }

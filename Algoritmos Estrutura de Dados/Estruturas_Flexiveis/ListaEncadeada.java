@@ -1,16 +1,16 @@
 package Estruturas_Flexiveis;
 
 public class ListaEncadeada {
-    private Celula first, last;
+    private CelulaSimples first, last;
 
     public ListaEncadeada() {
-        first = new Celula(-1); //  Celula de Incio (Cabecalho)
+        first = new CelulaSimples(-1); //  Celula de Incio (Cabecalho)
         last = first;
     }
 
     // Metodo de Inserir no Inicio
     public void insertStart(int x) {
-        Celula cell = new Celula(x);
+        CelulaSimples cell = new CelulaSimples(x);
 
         if(first == last) {
             first.next = cell;
@@ -22,8 +22,8 @@ public class ListaEncadeada {
     }
 
     // Metodo de Inserir no Final
-    public void inserEnd(int x) {
-        last.next = new Celula(x);
+    public void insertEnd(int x) {
+        last.next = new CelulaSimples(x);
 
         if(first == last) {
             first.next = last.next;
@@ -39,10 +39,10 @@ public class ListaEncadeada {
         } else if (position == 0) {
             insertStart(x);
         } else if (position == size()) {
-            inserEnd(x);
+            insertEnd(x);
         } else {
-            Celula i = first.next;
-            Celula tmp = new Celula(x);
+            CelulaSimples i = first.next;
+            CelulaSimples tmp = new CelulaSimples(x);
 
             for(int j = 0; j < position; j++) {
                 i = i.next;
@@ -55,7 +55,7 @@ public class ListaEncadeada {
 
     // Metodo de Remover no Inicio
     public int removeStart() {
-        Celula tmp = first.next;
+        CelulaSimples tmp = first.next;
         first.next = tmp.next;
         tmp.next = null;
 
@@ -64,7 +64,7 @@ public class ListaEncadeada {
 
     // Metodo de Remover no Final
     public int removeEnd() {
-        Celula i = first.next;
+        CelulaSimples i = first.next;
         int numberRemoved = last.cell;
 
         while(i.next != last) {
@@ -82,21 +82,21 @@ public class ListaEncadeada {
         int numberRemoved = -1;
 
         if(position < 0 || position > size()) {
-            throw new Exception("Erro ao Inserir - Posicao Invalida"); // Verifica a posicao
+            throw new Exception("Erro ao Remover - Posicao Invalida"); // Verifica a posicao
         } else if (position == 0) {
             numberRemoved = removeStart();
         } else if (position == size()) {
             numberRemoved = removeEnd();
         } else {
-            Celula i = first.next;
-            Celula tmp;
+            CelulaSimples i = first.next;
+            CelulaSimples tmp;
 
             for(int j = 0; j < position - 1; j++) {
                 i = i.next;
             }
 
             tmp = i.next;
-            i = tmp.next;
+            i.next = tmp.next;
             tmp.next = null;
 
             numberRemoved = tmp.cell;
@@ -109,7 +109,7 @@ public class ListaEncadeada {
     public int size() { 
         int counter = 0;
 
-        for(Celula i = first.next; i != null; i = i.next) {
+        for(CelulaSimples i = first.next; i != null; i = i.next) {
             counter++;
         }
 
@@ -118,7 +118,7 @@ public class ListaEncadeada {
 
     // Metodo de Mostrar os Elementos
     public void show() {
-        for(Celula i = first.next; i != null; i = i.next) {
+        for(CelulaSimples i = first.next; i != null; i = i.next) {
             if(i != last) {
                 System.out.print(i.cell + " - ");
             } else {
