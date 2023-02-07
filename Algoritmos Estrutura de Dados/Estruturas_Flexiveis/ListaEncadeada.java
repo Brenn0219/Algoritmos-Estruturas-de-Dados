@@ -1,4 +1,4 @@
-package Estruturas_Flexiveis.java;
+package Estruturas_Flexiveis;
 
 public class ListaEncadeada {
     private CelulaSimples first, last;

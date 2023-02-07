@@ -1,4 +1,4 @@
-package Estruturas_Flexiveis.java;
+package Estruturas_Flexiveis;
 
 public class CelulaSimples {
     public int cell;
