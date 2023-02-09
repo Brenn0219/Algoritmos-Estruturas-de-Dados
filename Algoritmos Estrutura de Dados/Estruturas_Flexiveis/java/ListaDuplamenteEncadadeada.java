@@ -1,4 +1,4 @@
-package Estruturas_Flexiveis;
+package Estruturas_Flexiveis.java;
 
 public class ListaDuplamenteEncadadeada {
     CelulaDupla first, last;
