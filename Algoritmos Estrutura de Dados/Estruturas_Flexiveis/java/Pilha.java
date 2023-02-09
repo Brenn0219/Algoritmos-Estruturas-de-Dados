@@ -12,6 +12,4 @@ class Pilha {
         top = new CelulaSimples(x);
         top = top.next;
     }
-
-    
 }
