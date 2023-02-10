@@ -1,13 +1,13 @@
 package Estruturas_Flexiveis.java;
 
-class Pilha {
+public class PilhaEncadeada {
     CelulaSimples top;
 
-    Pilha() {
+    public PilhaEncadeada() {
         top = null;
     }
 
-    // Metodo de Inserir (push)
+    // Metodo de Inserir (Empilhar)
     public void push(int x) {
         CelulaSimples tmp = new CelulaSimples(x);
         tmp.next = top;
@@ -15,7 +15,7 @@ class Pilha {
         tmp = null;
     }
 
-    // Metodo de Remover (pop)
+    // Metodo de Remover (Desempilhar)
     public int pop() throws Exception {
         if(top == null) {
             throw new Exception("Erro ao Remover");
@@ -28,6 +28,11 @@ class Pilha {
         tmp.next = tmp = null;
 
         return numberRemoved;
+    }
+
+    // Metodo para Verificar se a Pilha esta Vazia
+    public boolean empty() {
+        return (top == null);
     }
 
     // Metodo de Mostrar os Elementos
@@ -47,7 +52,6 @@ class Pilha {
             showRec(i.next);
             System.out.print(i.cell + " - ");
         }
-        System.out.println(i.cell);
     }
 
     public void showRec() {

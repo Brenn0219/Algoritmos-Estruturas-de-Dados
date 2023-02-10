@@ -4,7 +4,7 @@ public class ListaDuplamenteEncadadeada {
     CelulaDupla first, last;
 
     public ListaDuplamenteEncadadeada() {
-        first = new CelulaDupla(-1); // Celula Inicial (Cabecalho)
+        first = new CelulaDupla(); // Celula Inicial (Cabecalho)
         last = first;
     }
 

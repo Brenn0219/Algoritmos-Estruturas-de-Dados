@@ -4,7 +4,7 @@ public class ListaEncadeada {
     private CelulaSimples first, last;
 
     public ListaEncadeada() {
-        first = new CelulaSimples(-1); //  Celula de Incio (Cabecalho)
+        first = new CelulaSimples(); //  Celula de Incio (Cabecalho)
         last = first;
     }
 
