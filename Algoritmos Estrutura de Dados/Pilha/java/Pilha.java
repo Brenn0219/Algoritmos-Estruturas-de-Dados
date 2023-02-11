@@ -1,4 +1,4 @@
-package Pilha;
+package Pilha.java;
 
 // FILO - (First In Last Out)
 public class Pilha {

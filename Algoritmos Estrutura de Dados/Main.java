@@ -1,7 +1,7 @@
-import Lista.Lista;
-import Pilha.Pilha;
-import Fila.Fila;
 import Estruturas_Flexiveis.java.*;
+import Fila.java.Fila;
+import Lista.java.Lista;
+import Pilha.java.Pilha;
 
 class Main {
     public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package Lista;
+package Lista.java;
 
 public class Lista {
     private int[] list;
